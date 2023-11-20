@@ -1,0 +1,149 @@
+:root {
+  font-size: 16px;
+  --dark-blue: #628395;
+  --brown: #96897b;
+  --mustard: #dbad6a;
+  --earth: #cf99ff;
+  --green: #d0ce7c;
+  --dark-gray: #333333;
+  --mid-gray: #858585;
+  --light-gray: #ebebeb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body, main {
+  display: grid;
+  grid-template: auto 1fr / 1fr;
+}
+
+body {
+  height: 100vh;
+}
+
+/* -- STYLE FOR HEADER -- */
+
+header {
+  padding: 20px;
+  background-color: var(--green);
+  color: var(--dark-gray);
+}
+
+/* -- STYLE FOR MAIN -- */
+
+main {
+  background-color: var(--light-gray);
+}
+
+.bookshelf-controls {
+  padding: 20px;
+}
+
+.new-book {
+  font-size: 1rem;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--dark-blue);
+  color: white;
+}
+
+dialog {
+  margin: auto;
+  width: 300px;
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+}
+
+dialog::backdrop {
+  background-color: #00000050;
+}
+
+form, .input {
+  display: flex;
+  flex-direction: column;
+  color: var(--dark-gray);
+  font-size: 1rem;
+}
+
+form {
+  gap: 16px;
+}
+
+.input {
+  gap: 4px;
+}
+
+.input input {
+  height: 32px;
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+}
+
+.input:nth-child(4) {
+  flex-direction: row;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  justify-content: end;
+}
+
+.cancel, .add {
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 12px;
+}
+
+.cancel {
+  background: none;
+  color: var(--mid-gray);
+}
+
+.add {
+  background-color: var(--dark-blue);
+  color: white;
+}
+
+/* -- STYLE FOR BOOKSHELF -- */
+
+.added-books {
+  padding: 0 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+/* -- STYLE FOR INDIVIDUAL BOOKS -- */
+
+.added-books > div {
+  color: var(--dark-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px #00000024;
+  padding: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.book-status {
+  display: flex;
+  gap: 12px;
+}
